@@ -4,8 +4,8 @@ from apps.usuarios.serializers import UsuarioSerializer
 from apps.libros.serializers import LibroSerializer
 
 class PrestamoSerializer(serializers.ModelSerializer):
-	usuario = UsuarioSerializer(read_online=True)
-	libro = LibroSerializer(read_online=True)
+	usuario = UsuarioSerializer(read_only=True)
+	libro = LibroSerializer(read_only=True)
 	
 	class Meta:
 		model = Prestamo
