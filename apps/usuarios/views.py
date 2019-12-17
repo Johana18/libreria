@@ -8,7 +8,7 @@ from rest_framework import status
 # Create your views here.
 class ListUsuario(APIView):
 	def get(self, request):
-		usuario = Usuario.object.all()
+		usuario = Usuario.objects.all()
 		if usuario:
 			serializer = UsuarioSerializer(usuario, many=True)
 			return Response(data=serializer.data,status=status.HTTP_200_OK)
