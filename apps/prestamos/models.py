@@ -6,12 +6,12 @@ from apps.libros.models import Libro
 
 
 class Prestamo(models.Model):
-	fecha_salida = models.DateField(blank=True, null=True)
-	fecha_entrega = models.DateField(blank=True, null=True)
+	fecha_salida = models.DateField()
+	fecha_entrega = models.DateField()
 	usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 	libro = models.ForeignKey(Libro, on_delete=models.CASCADE)
 	devuelto = models.BooleanField(default=False)
 	comentario =  models.TextField(blank=True, null=True)
 
 	def __str__(self):
-		return 'Prestamo # ' + self.id
+		return 'Prestamo # ' + str(self.id)
