@@ -14,4 +14,4 @@ class Prestamo(models.Model):
 	comentario =  models.TextField(blank=True, null=True)
 
 	def __str__(self):
-		return 'Prestamo # ' + str(self.id)
+		return 'Prestamo # %s' % (self.id)
