@@ -6,8 +6,8 @@ from apps.libros.models import Libro
 
 
 class Prestamo(models.Model):
-	fecha_salida = models.DateTimeField(blank=True, null=True)
-	fecha_entrega = models.DateTimeField(blank=True, null=True)
+	fecha_salida = models.DateField(blank=True, null=True)
+	fecha_entrega = models.DateField(blank=True, null=True)
 	usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 	libro = models.ForeignKey(Libro, on_delete=models.CASCADE)
 	devuelto = models.BooleanField(default=False)

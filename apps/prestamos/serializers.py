@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from apps.prestamo.models import Prestamo
-from apps.usuario.serializers import UsuarioSerializer
-from apps.libro.serializers import LibroSerializer
+from apps.prestamos.models import Prestamo
+from apps.usuarios.serializers import UsuarioSerializer
+from apps.libros.serializers import LibroSerializer
 
 class PrestamoSerializer(serializers.ModelSerializer):
 	usuario = UsuarioSerializer(read_online=True)

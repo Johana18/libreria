@@ -1,7 +1,7 @@
 from django.urls import path
+from apps.prestamos.views import ListPrestamo, DetailPrestamo
 
 urlpatterns = [
-    #path('prestamos/list/', ),
-    #path('', include('apps.libros.urls')),
-    #path('', include('apps.prestamos.urls')),
+    path('api/v1.0/prestamos/', ListPrestamo.as_view(), name="list-prestamo" ),
+    path('api/v1.0/prestamos/<int:pk>/', DetailPrestamo.as_view(), name="detail-prestamo"),
 ]

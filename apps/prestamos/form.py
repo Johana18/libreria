@@ -1,5 +1,5 @@
 from django import forms
-from apps.prestamo.models import Prestamo
+from apps.prestamos.models import Prestamo
 
 class PrestamoForm(forms.ModelForm):
 	class Meta:
