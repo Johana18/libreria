@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'apps.usuarios',
     'apps.libros',
     'apps.prestamos',
-    'restframework',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -88,7 +88,7 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
-AUTH_USER_MODEL = 'usuario.Usuario'
+AUTH_USER_MODEL = 'usuarios.Usuario'
 
 AUTH_PASSWORD_VALIDATORS = [
     {

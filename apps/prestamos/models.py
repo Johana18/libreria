@@ -1,7 +1,7 @@
 from django.db import models
 
-from apps.usuario.models import Usuario
-from apps.libro.models import Libro
+from apps.usuarios.models import Usuario
+from apps.libros.models import Libro
 # Create your models here.
 
 
