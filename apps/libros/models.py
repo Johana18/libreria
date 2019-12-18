@@ -5,11 +5,15 @@ from django.db import models
 class Libro(models.Model):
 	GENERO_LIBRO = (
 		('NO', 'Novela'),
-		('CI', 'Ciencia'),
+		('CF', 'Ciencia Ficcion'),
+		('FA', 'Fantasia'),
 		('RO', 'Romance'),
 		('CU', 'Cuentos'),
 		('PO', 'Poesia'),
 		('RE', 'Relato'),
+		('TE', 'Terror'),
+		('HI', 'Historia'),
+		('LI', 'Literatura Infantil'),
 	)
 	nombre_libro =  models.CharField(max_length=50, blank=True, null=True)
 	genero = models.CharField(max_length=2, choices=GENERO_LIBRO)
